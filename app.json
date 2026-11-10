@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "SwipeClean",
+    "slug": "swipeclean",
+    "scheme": "swipeclean",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.swipeclean.app"
+    },
+    "android": {
+      "package": "com.swipeclean.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-image",
+      "expo-sqlite",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "SwipeClean needs access to your photos so you can review them and choose which ones to delete.",
+          "savePhotosPermission": false,
+          "granularPermissions": ["photo"]
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
